@@ -1,0 +1,36 @@
+{
+  "name": "calandr-backend",
+  "version": "2.0.0",
+  "description": "Calandr Cloud Run backend - Firestore + Pub/Sub + Cloud Tasks",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "jest --coverage",
+    "lint": "eslint src/",
+    "deploy": "gcloud run deploy calandr-backend --source . --region europe-west1"
+  },
+  "keywords": ["firestore", "cloud-run", "pubsub", "stripe"],
+  "author": "Arun",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "firebase-admin": "^12.0.0",
+    "@google-cloud/pubsub": "^4.0.0",
+    "@google-cloud/tasks": "^4.0.0",
+    "@google-cloud/storage": "^7.0.0",
+    "@google-cloud/secret-manager": "^4.0.0",
+    "jsonwebtoken": "^9.1.2",
+    "stripe": "^14.0.0",
+    "bcrypt": "^5.1.1",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
